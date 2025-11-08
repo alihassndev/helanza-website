@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import FeaturedProducts from "./components/FeaturedProducts";
-import ContactForm from "./components/ContactForm"; // <--- 1. IMPORT IT
+import AllCategories from "./components/AllCategories"; // <--- 1. IMPORT IT
+import ContactForm from "./components/ContactForm";
 import { headers } from "next/headers";
 import { products } from "@/data/products";
 
@@ -94,10 +95,12 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      {/* 3. Featured Products Section */}
+      {/* 3. "Smart" Featured Products Section */}
       <FeaturedProducts products={smartProducts} />
-      {/* 4. Quick Contact Form Section */}
-      <ContactForm /> {/* <--- 2. ADD IT HERE */}
+      {/* 4. "All Product Categories" Section */}
+      <AllCategories /> {/* <--- 2. ADD IT HERE */}
+      {/* 5. Quick Contact Form Section */}
+      <ContactForm />
     </main>
   );
 }
