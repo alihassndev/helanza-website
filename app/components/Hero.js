@@ -63,11 +63,12 @@ export default function Hero() {
             }`}
           >
             {/* Background Image */}
+            {/* Background Image */}
             <Image
               src={slide.image}
               alt={slide.headline}
-              layout="fill"
-              objectFit="cover"
+              fill // <-- This replaces 'layout="fill"'
+              style={{ objectFit: "cover" }} // <-- This replaces 'objectFit="cover"'
               className="z-0"
               priority={index === 0} // Load the first image faster
             />

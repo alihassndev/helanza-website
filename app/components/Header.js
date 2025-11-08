@@ -12,11 +12,11 @@ export default function Header() {
               <Image
                 src="/Helanza-logo-1.png" // This is your logo in the 'public' folder
                 alt="Helanza Ind. Logo"
-                width={40}
-                height={40}
+                width={50}
+                height={45}
                 className="h-10 w-auto"
               />
-              <span className="font-extrabold text-2xl tracking-tight text-gray-900">
+              <span className="font-bold text-xl tracking-tight text-gray-900">
                 Helanza Ind.
               </span>
             </div>
