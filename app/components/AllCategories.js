@@ -4,6 +4,11 @@ import Image from "next/image";
 // This is the list of your main categories
 const categories = [
   {
+    name: "Jackets",
+    href: "/products/jackets",
+    image: "/images/jackets.png",
+  },
+  {
     name: "Tracksuits & Sweatsuits",
     href: "/products/tracksuits",
     image: "/images/tracksuit.png",
@@ -14,19 +19,14 @@ const categories = [
     image: "/images/uniform.png",
   },
   {
-    name: "Jackets",
-    href: "/products/jackets",
-    image: "/images/jackets.png",
+    name: "Shortsets & T-Shirts",
+    href: "/products/shorts",
+    image: "/images/shortset.png",
   },
   {
     name: "Ladies Outfits",
     href: "/products/ladies",
     image: "/images/ladies-outfit.png",
-  },
-  {
-    name: "Shortsets & T-Shirts",
-    href: "/products/shorts",
-    image: "/images/shortset.png",
   },
   {
     name: "Accessories",

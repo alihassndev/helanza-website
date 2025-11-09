@@ -7,15 +7,7 @@ import Image from "next/image";
 // We define our slides here
 const slides = [
   {
-    image: "/images/hero-slide-1.png", // We'll add these placeholder images soon
-    headline: "Your Premier Partner in Custom Apparel",
-    subtext:
-      "High-quality manufacturing exporter from Sialkot, Pakistan. We bring your designs to life.",
-    cta: "Start Your Project",
-    link: "/contact",
-  },
-  {
-    image: "/images/hero-slide-2.png",
+    image: "/images/tracksuit-banner.png",
     headline: "Custom Tracksuits & Sweatsuits",
     subtext:
       "Full OEM/ODM service for premium fleece, polyester, and cut-and-sew designs.",
@@ -23,7 +15,15 @@ const slides = [
     link: "/products/tracksuits",
   },
   {
-    image: "/images/hero-slide-3.png",
+    image: "/images/custom-banner.png",
+    headline: "Your Premier Partner in Custom Apparel",
+    subtext:
+      "High-quality manufacturing exporter from Sialkot, Pakistan. We bring your designs to life.",
+    cta: "Start Your Project",
+    link: "/contact",
+  },
+  {
+    image: "/images/uniform-banner.png",
     headline: "Sublimated Team Uniforms",
     subtext:
       "Vibrant, custom-designed kits for soccer, basketball, baseball, and more. Exported globally.",
@@ -52,7 +52,10 @@ export default function Hero() {
   }, [currentSlide]);
 
   return (
-    <section className="relative h-[80vh] overflow-hidden bg-gray-900">
+    <section
+      // RESPONSIVE: 70vh height on mobile, 80vh on desktop
+      className="relative h-[70vh] md:h-[80vh] overflow-hidden bg-gray-900"
+    >
       <div className="relative h-full">
         {/* Slides */}
         {slides.map((slide, index) => (
@@ -62,27 +65,38 @@ export default function Hero() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* Background Image */}
-            {/* Background Image */}
+            {/* Background Image (Updated to modern Image component) */}
             <Image
               src={slide.image}
               alt={slide.headline}
-              fill // <-- This replaces 'layout="fill"'
-              style={{ objectFit: "cover" }} // <-- This replaces 'objectFit="cover"'
+              fill
+              style={{ objectFit: "cover" }}
               className="z-0"
-              priority={index === 0} // Load the first image faster
+              priority={index === 0}
             />
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
             {/* Content */}
             <div className="relative z-20 h-full flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-xl text-left">
-                <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              {/* RESPONSIVE: Text is centered on mobile, left-aligned on desktop */}
+              <div className="max-w-xl text-center md:text-left">
+                <h1
+                  // RESPONSIVE: Font size is smaller on mobile
+                  className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
+                >
                   {slide.headline}
                 </h1>
-                <p className="mt-6 text-xl text-gray-200">{slide.subtext}</p>
-                <div className="mt-10">
+                <p
+                  // RESPONSIVE: Font size is smaller on mobile
+                  className="mt-6 text-lg md:text-xl text-gray-200"
+                >
+                  {slide.subtext}
+                </p>
+                <div
+                  // RESPONSIVE: Button is centered on mobile
+                  className="mt-10 flex justify-center md:justify-start"
+                >
                   <Link href={slide.link}>
                     <span className="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-md text-lg hover:bg-yellow-300 cursor-pointer">
                       {slide.cta}
@@ -95,16 +109,16 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Prev/Next Buttons */}
+      {/* RESPONSIVE: Prev/Next Buttons are hidden on mobile */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 z-30 -translate-y-1/2 bg-black bg-opacity-30 p-4 text-white hover:bg-opacity-50"
+        className="absolute left-0 top-1/2 z-30 -translate-y-1/2 bg-black bg-opacity-30 p-4 text-white hover:bg-opacity-50 hidden md:block"
       >
         &#10094;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 z-30 -translate-y-1/2 bg-black bg-opacity-30 p-4 text-white hover:bg-opacity-50"
+        className="absolute right-0 top-1/2 z-30 -translate-y-1/2 bg-black bg-opacity-30 p-4 text-white hover:bg-opacity-50 hidden md:block"
       >
         &#10095;
       </button>
