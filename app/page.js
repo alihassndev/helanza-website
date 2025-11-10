@@ -1,4 +1,4 @@
-// This is now a simple, fast component again. No 'async', no 'use'.
+// This is the simple, correct Home Page
 import Hero from "./components/Hero";
 import FeaturedProducts from "./components/FeaturedProducts";
 import AllCategories from "./components/AllCategories";
@@ -63,9 +63,7 @@ export default function Home() {
       <AllCategories />
 
       {/* 5. Quick Contact Form Section */}
-      {/* 5. Quick Contact Form Section */}
       <section id="contact-us">
-        {/* <-- WE ADDED THIS ID */}
         <ContactForm />
       </section>
     </main>

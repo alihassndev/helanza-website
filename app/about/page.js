@@ -28,7 +28,7 @@ export default function AboutPage() {
                 alt="Founder of Helanza Ind."
                 width={400}
                 height={400}
-                className="w-64 h-64 mx-auto rounded-full object-cover shadow-lg"
+                className="w-64 h-64 mx-auto rounded-full object-cover shadow-lg object-top"
               />
               <h3 className="mt-6 text-2xl font-bold text-gray-900">
                 Ali Hassan

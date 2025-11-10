@@ -1,6 +1,6 @@
-"use client"; // <-- 1. This is now a client component
+"use client";
 
-import { useState, useEffect } from "react"; // <-- 2. Import hooks
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,23 +12,22 @@ function LoadingSkeleton() {
 }
 
 export default function FeaturedProducts() {
-  // 3. Set up state for loading and products
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // 4. Fetch the smart products when the component loads
   useEffect(() => {
-    fetch("/api/get-products") // Call our new API
+    // Call our new API route
+    fetch("/api/get-products")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data); // Set the products
-        setIsLoading(false); // Stop loading
+        setProducts(data);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error("Failed to fetch featured products:", err);
-        setIsLoading(false); // Stop loading even if it fails
+        setIsLoading(false);
       });
-  }, []); // The empty array [] means this runs only once
+  }, []); // Runs once on load
 
   return (
     <section className="bg-gray-50 py-20">
@@ -43,7 +42,6 @@ export default function FeaturedProducts() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* 5. This is our new loading logic */}
           {isLoading ? (
             // If loading, show 4 skeletons
             <>

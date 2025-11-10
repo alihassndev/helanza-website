@@ -4,7 +4,7 @@ export const products = [
   {
     id: 1,
     name: "Puffer/Bubble Jacket",
-    image: "/images/placeholderholder.png",
+    image: "/images/placeholder.png",
   },
   {
     id: 2,
