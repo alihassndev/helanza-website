@@ -187,7 +187,7 @@ export default function Header() {
                 About Us
               </span>
             </Link>
-            <Link href="/contact">
+            <Link href="/#contact-us">
               <span className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
                 Contact Us
               </span>

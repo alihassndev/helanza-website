@@ -63,7 +63,11 @@ export default function Home() {
       <AllCategories />
 
       {/* 5. Quick Contact Form Section */}
-      <ContactForm />
+      {/* 5. Quick Contact Form Section */}
+      <section id="contact-us">
+        {/* <-- WE ADDED THIS ID */}
+        <ContactForm />
+      </section>
     </main>
   );
 }

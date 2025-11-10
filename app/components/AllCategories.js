@@ -24,7 +24,7 @@ const categories = [
     image: "/images/shortset.png",
   },
   {
-    name: "Ladies Outfits",
+    name: "Fitness wear",
     href: "/products/ladies",
     image: "/images/ladies-outfit.png",
   },

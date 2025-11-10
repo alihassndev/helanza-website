@@ -69,9 +69,6 @@ export default function FeaturedProducts() {
                   <h3 className="mt-4 text-lg font-bold text-gray-900">
                     {product.name}
                   </h3>
-                  <p className="mt-1 text-base text-gray-500">
-                    From {product.price}
-                  </p>
                 </div>
               </Link>
             ))
