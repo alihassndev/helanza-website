@@ -15,20 +15,20 @@ const slides = [
     link: "/products/tracksuits",
   },
   {
-    image: "/images/custom-banner.png",
-    headline: "Your Premier Partner in Custom Apparel",
-    subtext:
-      "High-quality manufacturing exporter from Sialkot, Pakistan. We bring your designs to life.",
-    cta: "Start Your Project",
-    link: "/contact",
-  },
-  {
     image: "/images/uniform-banner.png",
     headline: "Sublimated Team Uniforms",
     subtext:
       "Vibrant, custom-designed kits for soccer, basketball, baseball, and more. Exported globally.",
     cta: "Inquire About Uniforms",
     link: "/products/uniforms",
+  },
+  {
+    image: "/images/custom-banner.png",
+    headline: "Your Premier Partner in Custom Apparel",
+    subtext:
+      "High-quality manufacturing exporter from Sialkot, Pakistan. We bring your designs to life.",
+    cta: "Start Your Project",
+    link: "/contact",
   },
 ];
 
