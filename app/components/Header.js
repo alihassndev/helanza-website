@@ -84,7 +84,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
               <Image
-                src="/Helanza-logo-1.png"
+                src="/Helanza-pic.png"
                 alt="Helanza Ind. Logo"
                 width={40}
                 height={40}
@@ -287,7 +287,7 @@ export default function Header() {
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/#contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block text-lg font-medium text-gray-900 hover:text-yellow-500"
             >
